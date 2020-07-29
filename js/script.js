@@ -21,12 +21,12 @@ const dataKomet = [{
         text: "Vorhang Auf",
     },
     {
-        url: "https://youtu.be/LHb_t9NoDZ8",
+        url: "https://youtu.be/lIfHab76HLw",
         text: "Komet",
     },
     {
         url: "https://youtu.be/LHb_t9NoDZ8",
-        text: "Scherben Bringen Glück",
+        text: "Scherben bringen Glück",
     },
     {
         url: "https://youtu.be/6T76DInoRiU",
@@ -38,11 +38,11 @@ const dataKomet = [{
     },
     {
         url: "https://youtu.be/xLNnNDpexXo",
-        text: "Schwarz Oder Weiß",
+        text: "Schwarz oder Weiß",
     },
     {
         url: "https://youtu.be/-mcKB8NAqis",
-        text: "Nicht In Meinem Namen",
+        text: "Nicht in meinem Namen",
     },
     {
         url: "https://youtu.be/gQx_NSaATGY",
@@ -55,16 +55,17 @@ const dataKomet = [{
 ];
 
 function showKometMenu() {
-    document.querySelector(".toggler").checked = true;
-    localStorage.setItem("dataKomet", dataKomet);
-    const songsKomet = dataKomet;
-    for (var i = 0; i < songsKomet.length; i++) {
-        const a_komet = document.createElement("a");
-        a_komet.setAttribute("href", songsKomet[i].url);
-        const li_komet = document.createElement("li");
-        a_komet.appendChild(document.createTextNode(songsKomet[i].text));
-        li_komet.append(a_komet);
-        lyrics.appendChild(li_komet);
+    if ((document.querySelector(".toggler").checked = true)) {
+        localStorage.setItem("dataKomet", JSON.stringify(dataKomet));
+        const songsKomet = JSON.parse(localStorage.getItem("dataKomet"));
+        for (var i = 0; i < songsKomet.length; i++) {
+            const a_komet = document.createElement("a");
+            a_komet.setAttribute("href", songsKomet[i].url);
+            const li_komet = document.createElement("li");
+            a_komet.appendChild(document.createTextNode(songsKomet[i].text));
+            li_komet.append(a_komet);
+            lyrics.appendChild(li_komet);
+        }
     }
 }
 
@@ -108,20 +109,22 @@ const dataErdwaerts = [{
 ];
 
 function showErdwaertsMenu() {
-    document.querySelector(".toggler").checked = true;
-    localStorage.setItem("dataErdwaerts", dataErdwaerts);
-    const songsErdwaerts = dataErdwaerts;
-    for (var i = 0; i < songsErdwaerts.length; i++) {
-        const a_erdw = document.createElement("a");
-        a_erdw.setAttribute("href", songsErdwaerts[i].url);
+    if ((document.querySelector(".toggler").checked = true)) {
+        localStorage.setItem("dataErdwaerts", JSON.stringify(dataErdwaerts));
+        const songsErdwaerts = JSON.parse(localStorage.getItem("dataErdwaerts"));
 
-        const li_erdw = document.createElement("li");
+        for (var i = 0; i < songsErdwaerts.length; i++) {
+            const a_erdw = document.createElement("a");
+            a_erdw.setAttribute("href", songsErdwaerts[i].url);
 
-        a_erdw.appendChild(document.createTextNode(songsErdwaerts[i].text));
+            const li_erdw = document.createElement("li");
 
-        li_erdw.append(a_erdw);
+            a_erdw.appendChild(document.createTextNode(songsErdwaerts[i].text));
 
-        lyrics.appendChild(li_erdw);
+            li_erdw.append(a_erdw);
+
+            lyrics.appendChild(li_erdw);
+        }
     }
 }
 
@@ -147,7 +150,7 @@ const dataZombie = [{
         text: "Unter Strom",
     },
     {
-        url: "https://youtu.be/vCTWQsbra-A",
+        url: "https://youtu.be/ZqVKI-QC-3w",
         text: "Fanatisch",
     },
     {
@@ -175,11 +178,11 @@ const dataZombie = [{
         text: "Frei ",
     },
     {
-        url: "https://youtu.be/HUb5rGfHZ_o",
+        url: "https://youtu.be/DT8PPahnHlI",
         text: "Hurra - wir leben noch ",
     },
     {
-        url: "https://youtu.be/bjCahqskGdc",
+        url: "https://youtu.be/0bfc1kePLP0",
         text: "Herz aus Stein",
     },
     {
@@ -189,21 +192,21 @@ const dataZombie = [{
 ];
 
 function showZombielandMenu() {
-    document.querySelector(".toggler").checked = true;
+    if ((document.querySelector(".toggler").checked = true)) {
+        localStorage.setItem("dataZombie", JSON.stringify(dataZombie));
+        const songsZombie = JSON.parse(localStorage.getItem("dataZombie"));
+        for (var i = 0; i < songsZombie.length; i++) {
+            const a_zombi = document.createElement("a");
+            a_zombi.setAttribute("href", songsZombie[i].url);
 
-    localStorage.setItem("dataZombie", dataZombie);
-    const songsZombie = dataZombie;
-    for (var i = 0; i < songsZombie.length; i++) {
-        const a_zombi = document.createElement("a");
-        a_zombi.setAttribute("href", songsZombie[i].url);
+            const li_zombi = document.createElement("li");
 
-        const li_zombi = document.createElement("li");
+            a_zombi.appendChild(document.createTextNode(songsZombie[i].text));
 
-        a_zombi.appendChild(document.createTextNode(songsZombie[i].text));
+            li_zombi.append(a_zombi);
 
-        li_zombi.append(a_zombi);
-
-        lyrics.appendChild(li_zombi);
+            lyrics.appendChild(li_zombi);
+        }
     }
 }
 
@@ -213,11 +216,11 @@ toggler.addEventListener("click", showPage);
 //Götterdämmerung -------------------------------------------------------------------------------------
 
 const dataGotter = [{
-        url: "https://youtu.be/T0j00O-PN6g",
+        url: "https://youtu.be/fzhF6e7uK64",
         text: "Jagdzeit",
     },
     {
-        url: "https://youtu.be/KUudVWU5DrA",
+        url: "https://youtu.be/xIbZbPin6rk",
         text: "Heute Nacht",
     },
     {
@@ -237,11 +240,11 @@ const dataGotter = [{
         text: "Prellbock",
     },
     {
-        url: "https://youtu.be/MZq8RkFNbFg",
+        url: "https://youtu.be/_I1wC_hYoJE",
         text: "Mann im Mond ",
     },
     {
-        url: "https://youtu.be/64TNT3dv_k8",
+        url: "https://youtu.be/MZq8RkFNbFg",
         text: "Feindbild",
     },
     {
@@ -259,20 +262,21 @@ const dataGotter = [{
 ];
 
 function showGotterMenu() {
-    document.querySelector(".toggler").checked = true;
-    localStorage.setItem("dataGotter", dataGotter);
-    const songsGotter = dataGotter;
-    for (var i = 0; i < songsGotter.length; i++) {
-        const a_gotter = document.createElement("a");
-        a_gotter.setAttribute("href", songsGotter[i].url);
+    if ((document.querySelector(".toggler").checked = true)) {
+        localStorage.setItem("dataGotter", JSON.stringify(dataGotter));
+        const songsGotter = JSON.parse(localStorage.getItem("dataGotter"));
+        for (var i = 0; i < songsGotter.length; i++) {
+            const a_gotter = document.createElement("a");
+            a_gotter.setAttribute("href", songsGotter[i].url);
 
-        const li_gotter = document.createElement("li");
+            const li_gotter = document.createElement("li");
 
-        a_gotter.appendChild(document.createTextNode(songsGotter[i].text));
+            a_gotter.appendChild(document.createTextNode(songsGotter[i].text));
 
-        li_gotter.append(a_gotter);
+            li_gotter.append(a_gotter);
 
-        lyrics.appendChild(li_gotter);
+            lyrics.appendChild(li_gotter);
+        }
     }
 }
 
@@ -309,10 +313,7 @@ const dataHeuchler = [{
         url: "https://youtu.be/75bs9YIZUcw",
         text: "L'Aventure ",
     },
-    {
-        url: "https://youtu.be/64TNT3dv_k8",
-        text: "Feindbild",
-    },
+
     {
         url: "https://youtu.be/QaMFc1ZMfP0",
         text: "Schau in mein Herz",
@@ -328,20 +329,21 @@ const dataHeuchler = [{
 ];
 
 function showHeuchlerMenu() {
-    document.querySelector(".toggler").checked = true;
-    localStorage.setItem("dataHeuchler", dataHeuchler);
-    const songsHeuchler = dataHeuchler;
-    for (var i = 0; i < songsHeuchler.length; i++) {
-        const a_heuchler = document.createElement("a");
-        a_heuchler.setAttribute("href", songsHeuchler[i].url);
+    if ((document.querySelector(".toggler").checked = true)) {
+        localStorage.setItem("dataHeuchler", JSON.stringify(dataHeuchler));
+        const songsHeuchler = JSON.parse(localStorage.getItem("dataHeuchler"));
+        for (var i = 0; i < songsHeuchler.length; i++) {
+            const a_heuchler = document.createElement("a");
+            a_heuchler.setAttribute("href", songsHeuchler[i].url);
 
-        const li_heuchler = document.createElement("li");
+            const li_heuchler = document.createElement("li");
 
-        a_heuchler.appendChild(document.createTextNode(songsHeuchler[i].text));
+            a_heuchler.appendChild(document.createTextNode(songsHeuchler[i].text));
 
-        li_heuchler.append(a_heuchler);
+            li_heuchler.append(a_heuchler);
 
-        lyrics.appendChild(li_heuchler);
+            lyrics.appendChild(li_heuchler);
+        }
     }
 }
 
@@ -399,26 +401,27 @@ const dataFunf = [{
         text: "Es tut weh",
     },
     {
-        url: "https://youtu.be/3reMqxtA9eA",
+        url: "https://youtu.be/-Er7k8jNl_Q",
         text: "Augenblick",
     },
 ];
 
 function showFunfMenu() {
-    document.querySelector(".toggler").checked = true;
-    localStorage.setItem("dataFunf", dataFunf);
-    const songsFunf = dataFunf;
-    for (var i = 0; i < songsFunf.length; i++) {
-        const a_funf = document.createElement("a");
-        a_funf.setAttribute("href", songsFunf[i].url);
+    if ((document.querySelector(".toggler").checked = true)) {
+        localStorage.setItem("dataFunf", JSON.stringify(dataFunf));
+        const songsFunf = JSON.parse(localStorage.getItem("dataFunf"));
+        for (var i = 0; i < songsFunf.length; i++) {
+            const a_funf = document.createElement("a");
+            a_funf.setAttribute("href", songsFunf[i].url);
 
-        const li_funf = document.createElement("li");
+            const li_funf = document.createElement("li");
 
-        a_funf.appendChild(document.createTextNode(songsFunf[i].text));
+            a_funf.appendChild(document.createTextNode(songsFunf[i].text));
 
-        li_funf.append(a_funf);
+            li_funf.append(a_funf);
 
-        lyrics.appendChild(li_funf);
+            lyrics.appendChild(li_funf);
+        }
     }
 }
 
@@ -441,14 +444,14 @@ const dataHerzwerkII = [{
     },
     {
         url: "https://youtu.be/oVdzeTMtmgM",
-        text: " 5. März ",
+        text: "5. März ",
     },
     {
         url: "https://youtu.be/RYo14_kWX_E",
         text: "F.F.F. (Fleisch für Fantasie)",
     },
     {
-        url: "https://youtu.be/yJouQnCDOpI",
+        url: "https://youtu.be/exsZYYGat_o",
         text: "Hand auf's Herz",
     },
     {
@@ -457,12 +460,17 @@ const dataHerzwerkII = [{
     },
     {
         url: "https://youtu.be/vHFR20F_40w",
-        text: "An deinem Grab ",
+        text: "Heute schon gelebt ",
+    },
+    {
+        url: "https://youtu.be/min6CyW6LTQ",
+        text: "An deinem Grab",
     },
     {
         url: "https://youtu.be/aLd8-4VPOiM",
         text: "Perfekte Droge",
     },
+
     {
         url: "https://youtu.be/fzgZdly6VzU",
         text: " Spiel Nicht...  ",
@@ -478,20 +486,23 @@ const dataHerzwerkII = [{
 ];
 
 function showHerzwerkIIMenu() {
-    document.querySelector(".toggler").checked = true;
-    localStorage.setItem("dataHerzwerkII", dataHerzwerkII);
-    const songsHerzwerkII = dataHerzwerkII;
-    for (var i = 0; i < songsHerzwerkII.length; i++) {
-        const a_herzwerkII = document.createElement("a");
-        a_herzwerkII.setAttribute("href", songsHerzwerkII[i].url);
+    if ((document.querySelector(".toggler").checked = true)) {
+        localStorage.setItem("dataHerzwerkII", JSON.stringify(dataHerzwerkII));
+        const songsHerzwerkII = JSON.parse(localStorage.getItem("dataHerzwerkII"));
+        for (var i = 0; i < songsHerzwerkII.length; i++) {
+            const a_herzwerkII = document.createElement("a");
+            a_herzwerkII.setAttribute("href", songsHerzwerkII[i].url);
 
-        const li_herzwerkII = document.createElement("li");
+            const li_herzwerkII = document.createElement("li");
 
-        a_herzwerkII.appendChild(document.createTextNode(songsHerzwerkII[i].text));
+            a_herzwerkII.appendChild(
+                document.createTextNode(songsHerzwerkII[i].text)
+            );
 
-        li_herzwerkII.append(a_herzwerkII);
+            li_herzwerkII.append(a_herzwerkII);
 
-        lyrics.appendChild(li_herzwerkII);
+            lyrics.appendChild(li_herzwerkII);
+        }
     }
 }
 
@@ -508,7 +519,7 @@ const dataHimmel = [{
         text: "Himmelfahrt ",
     },
     {
-        url: "https://youtu.be/HFYsO7pMWD4",
+        url: "https://youtu.be/FbIylWJRyL8",
         text: "Showdown",
     },
     {
@@ -537,6 +548,11 @@ const dataHimmel = [{
     },
     {
         url: "https://youtu.be/hIljePHVLxU",
+        text: "Beiss Mich  ",
+    },
+
+    {
+        url: "https://youtu.be/CHWFMGlOye8",
         text: "Tötet den DJ   ",
     },
     {
@@ -546,20 +562,21 @@ const dataHimmel = [{
 ];
 
 function showHimmelMenu() {
-    document.querySelector(".toggler").checked = true;
-    localStorage.setItem("dataHimmel", dataHimmel);
-    const songsHimmel = dataHimmel;
-    for (var i = 0; i < songsHimmel.length; i++) {
-        const a_himmel = document.createElement("a");
-        a_himmel.setAttribute("href", songsHimmel[i].url);
+    if ((document.querySelector(".toggler").checked = true)) {
+        localStorage.setItem("dataHimmel", JSON.stringify(dataHimmel));
+        const songsHimmel = JSON.parse(localStorage.getItem("dataHimmel"));
+        for (var i = 0; i < songsHimmel.length; i++) {
+            const a_himmel = document.createElement("a");
+            a_himmel.setAttribute("href", songsHimmel[i].url);
 
-        const li_himmel = document.createElement("li");
+            const li_himmel = document.createElement("li");
 
-        a_himmel.appendChild(document.createTextNode(songsHimmel[i].text));
+            a_himmel.appendChild(document.createTextNode(songsHimmel[i].text));
 
-        li_himmel.append(a_himmel);
+            li_himmel.append(a_himmel);
 
-        lyrics.appendChild(li_himmel);
+            lyrics.appendChild(li_himmel);
+        }
     }
 }
 
@@ -572,15 +589,15 @@ const dataKopf = [{
         text: "Liebestöter",
     },
     {
-        url: "https://youtu.be/K7Aq0J048jg",
+        url: "https://youtu.be/AgNPwXuLlR0",
         text: "Kopfschuss ",
     },
     {
-        url: "https://youtu.be/9X1Yt7u2Z8E",
+        url: "https://youtu.be/j3B459Av3u0",
         text: "Herz aus Stein  ",
     },
     {
-        url: "https://youtu.be/tOlZAnxal8E",
+        url: "https://youtu.be/6nb_EWKLj8M",
         text: "Miststück ",
     },
     {
@@ -618,20 +635,21 @@ const dataKopf = [{
 ];
 
 function showKopfschussMenu() {
-    document.querySelector(".toggler").checked = true;
-    localStorage.setItem("dataKopf", dataKopf);
-    const songsKopf = dataKopf;
-    for (var i = 0; i < songsKopf.length; i++) {
-        const a_kopf = document.createElement("a");
-        a_kopf.setAttribute("href", songsKopf[i].url);
+    if ((document.querySelector(".toggler").checked = true)) {
+        localStorage.setItem("dataKopf", JSON.stringify(dataKopf));
+        const songsKopf = JSON.parse(localStorage.getItem("dataKopf"));
+        for (var i = 0; i < songsKopf.length; i++) {
+            const a_kopf = document.createElement("a");
+            a_kopf.setAttribute("href", songsKopf[i].url);
 
-        const li_kopf = document.createElement("li");
+            const li_kopf = document.createElement("li");
 
-        a_kopf.appendChild(document.createTextNode(songsKopf[i].text));
+            a_kopf.appendChild(document.createTextNode(songsKopf[i].text));
 
-        li_kopf.append(a_kopf);
+            li_kopf.append(a_kopf);
 
-        lyrics.appendChild(li_kopf);
+            lyrics.appendChild(li_kopf);
+        }
     }
 }
 
@@ -640,23 +658,23 @@ kopfschuss.addEventListener("click", showKopfschussMenu);
 // Wer bist du -------------------------------------------------------------------------------
 
 const dataWerbist = [{
-        url: "https://youtu.be/7gyl94PSmZY",
+        url: "https://youtu.be/bvuK3R8AGMQ",
         text: "Gott sein ",
     },
     {
-        url: "https://youtu.be/ODmz7_UE_AA",
+        url: "https://youtu.be/izewpkMaVDI",
         text: "Wer bist du  ",
     },
     {
-        url: "https://youtu.be/74IlvYKtY8s",
+        url: "https://youtu.be/S5KrIFbfH-4",
         text: "Schläg Zurück  ",
     },
     {
-        url: "https://youtu.be/atMvUliJjMM",
+        url: "https://youtu.be/eIqUr2VKo90",
         text: "Das Leben ",
     },
     {
-        url: "https://youtu.be/SQis-4PYHEo",
+        url: "https://youtu.be/cMCQc3QxMDM",
         text: "Finsternis",
     },
     {
@@ -664,19 +682,19 @@ const dataWerbist = [{
         text: "Licht ",
     },
     {
-        url: "https://youtu.be/egYPEAL8Vgg",
+        url: "https://youtu.be/Aa4U6YnEQxc",
         text: "Negativ",
     },
     {
-        url: "https://youtu.be/xszFpDCZyF4",
+        url: "https://youtu.be/P-rE52CY-JU",
         text: "Kopf durch die Wand ",
     },
     {
-        url: "https://youtu.be/pXP46nlBrxY",
+        url: "https://youtu.be/ZF8bpUtJ3v4",
         text: "Müde ",
     },
     {
-        url: "https://youtu.be/wD8pVg2WLW8",
+        url: "https://youtu.be/t9oqf41XrO4",
         text: "Kröne der Schöpfung ",
     },
     {
@@ -684,30 +702,31 @@ const dataWerbist = [{
         text: "Tanzen gehen",
     },
     {
-        url: "https://youtu.be/C3kPCMWyklM",
+        url: "https://youtu.be/E2HNeBJndtM",
         text: "Die Gedanken sind frei",
     },
     {
-        url: "https://youtu.be/8nGTs1guNXQ",
+        url: "https://youtu.be/yz4EaErceSU",
         text: "Hänschenklein Siebenundneunzig ",
     },
 ];
 
 function showWerBistDuMenu() {
-    document.querySelector(".toggler").checked = true;
-    localStorage.setItem("dataWerbist", dataWerbist);
-    const songsWerbist = dataWerbist;
-    for (var i = 0; i < songsWerbist.length; i++) {
-        const a_werbist = document.createElement("a");
-        a_werbist.setAttribute("href", songsWerbist[i].url);
+    if ((document.querySelector(".toggler").checked = true)) {
+        localStorage.setItem("dataWerbist", JSON.stringify(dataWerbist));
+        const songsWerbist = JSON.parse(localStorage.getItem("dataWerbist"));
+        for (var i = 0; i < songsWerbist.length; i++) {
+            const a_werbist = document.createElement("a");
+            a_werbist.setAttribute("href", songsWerbist[i].url);
 
-        const li_werbist = document.createElement("li");
+            const li_werbist = document.createElement("li");
 
-        a_werbist.appendChild(document.createTextNode(songsWerbist[i].text));
+            a_werbist.appendChild(document.createTextNode(songsWerbist[i].text));
 
-        li_werbist.append(a_werbist);
+            li_werbist.append(a_werbist);
 
-        lyrics.appendChild(li_werbist);
+            lyrics.appendChild(li_werbist);
+        }
     }
 }
 
@@ -716,7 +735,7 @@ werBistDu.addEventListener("click", showWerBistDuMenu);
 // Herzwerk -------------------------------------------------------------------
 
 const dataHerzwerk = [{
-        url: "https://youtu.be/SilokSnYX5U",
+        url: "https://youtu.be/E94RcCiiU7M",
         text: "Die Kröne der Schöpfung - An einem Kind ",
     },
     {
@@ -754,20 +773,21 @@ const dataHerzwerk = [{
 ];
 
 function showHerzwerk() {
-    document.querySelector(".toggler").checked = true;
-    localStorage.setItem("dataHerzwerk", dataHerzwerk);
-    const songsHerzwerk = dataHerzwerk;
-    for (var i = 0; i < songsHerzwerk.length; i++) {
-        const a_herzwerk = document.createElement("a");
-        a_herzwerk.setAttribute("href", songsHerzwerk[i].url);
+    if ((document.querySelector(".toggler").checked = true)) {
+        localStorage.setItem("dataHerzwerk", JSON.stringify(dataHerzwerk));
+        const songsHerzwerk = JSON.parse(localStorage.getItem("dataHerzwerk"));
+        for (var i = 0; i < songsHerzwerk.length; i++) {
+            const a_herzwerk = document.createElement("a");
+            a_herzwerk.setAttribute("href", songsHerzwerk[i].url);
 
-        const li_herzwerk = document.createElement("li");
+            const li_herzwerk = document.createElement("li");
 
-        a_herzwerk.appendChild(document.createTextNode(songsHerzwerk[i].text));
+            a_herzwerk.appendChild(document.createTextNode(songsHerzwerk[i].text));
 
-        li_herzwerk.append(a_herzwerk);
+            li_herzwerk.append(a_herzwerk);
 
-        lyrics.appendChild(li_herzwerk);
+            lyrics.appendChild(li_herzwerk);
+        }
     }
 }
 
