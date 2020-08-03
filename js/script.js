@@ -14,6 +14,16 @@ const kopfschuss = document.getElementById("kopfschuss");
 const werBistDu = document.getElementById("werBistDu");
 const herzwerk = document.getElementById("herzwerk");
 
+toggler.addEventListener("click", showPage);
+
+function showPage() {
+    document.querySelector(".toggler").checked = false;
+    localStorage.clear();
+    while (lyrics.hasChildNodes()) {
+        lyrics.removeChild(lyrics.firstChild);
+    }
+}
+
 // Komet --------------------------------------------------------------------------------------------
 
 const dataKomet = [{
@@ -69,16 +79,11 @@ function showKometMenu() {
     }
 }
 
-function showPage() {
-    document.querySelector(".toggler").checked = false;
-    localStorage.clear();
-    while (lyrics.hasChildNodes()) {
-        lyrics.removeChild(lyrics.firstChild);
-    }
+if (localStorage.getItem("dataKomet")) {
+    showKometMenu();
 }
 
 komet.addEventListener("click", showKometMenu);
-toggler.addEventListener("click", showPage);
 
 // Erdwaerts ---------------------------------------------------------------------------------------------
 
@@ -128,8 +133,11 @@ function showErdwaertsMenu() {
     }
 }
 
+if (localStorage.getItem("dataErdwaerts")) {
+    showErdwaertsMenu();
+}
+
 erdwaerts.addEventListener("click", showErdwaertsMenu);
-toggler.addEventListener("click", showPage);
 
 // Zombieland ---------------------------------------------------------------------------------------
 
@@ -210,8 +218,11 @@ function showZombielandMenu() {
     }
 }
 
+if (localStorage.getItem("dataZombie")) {
+    showZombielandMenu();
+}
+
 zombieland.addEventListener("click", showZombielandMenu);
-toggler.addEventListener("click", showPage);
 
 //Götterdämmerung -------------------------------------------------------------------------------------
 
@@ -280,8 +291,11 @@ function showGotterMenu() {
     }
 }
 
+if (localStorage.getItem("dataGotter")) {
+    showGotterMenu();
+}
+
 gotterdamerung.addEventListener("click", showGotterMenu);
-toggler.addEventListener("click", showPage);
 
 // Heuchler------------------------------------------------------------------------------------------
 
@@ -347,8 +361,11 @@ function showHeuchlerMenu() {
     }
 }
 
+if (localStorage.getItem("dataHeuchler")) {
+    showHeuchlerMenu();
+}
+
 heuchler.addEventListener("click", showHeuchlerMenu);
-toggler.addEventListener("click", showPage);
 
 // Megaherz 5 --------------------------------------------------------------------------
 
@@ -425,8 +442,11 @@ function showFunfMenu() {
     }
 }
 
+if (localStorage.getItem("dataFunf")) {
+    showFunfMenu();
+}
+
 funf.addEventListener("click", showFunfMenu);
-toggler.addEventListener("click", showPage);
 
 // Herzwerk II ------------------------------------------------------------------------------------------
 
@@ -506,6 +526,10 @@ function showHerzwerkIIMenu() {
     }
 }
 
+if (localStorage.getItem("dataHerzwerkII")) {
+    showHerzwerkIIMenu();
+}
+
 herzwerkII.addEventListener("click", showHerzwerkIIMenu);
 
 // Himmelfahrt -------------------------------------------------------------------------------------------
@@ -580,6 +604,10 @@ function showHimmelMenu() {
     }
 }
 
+if (localStorage.getItem("dataHimmel")) {
+    showHimmelMenu();
+}
+
 himmelfahrt.addEventListener("click", showHimmelMenu);
 
 // Kopfschuss ---------------------------------------------------------------------------------
@@ -651,6 +679,10 @@ function showKopfschussMenu() {
             lyrics.appendChild(li_kopf);
         }
     }
+}
+
+if (localStorage.getItem("dataKopf")) {
+    showKopfschussMenu();
 }
 
 kopfschuss.addEventListener("click", showKopfschussMenu);
@@ -730,6 +762,10 @@ function showWerBistDuMenu() {
     }
 }
 
+if (localStorage.getItem("dataWerbist")) {
+    showWerBistDuMenu();
+}
+
 werBistDu.addEventListener("click", showWerBistDuMenu);
 
 // Herzwerk -------------------------------------------------------------------
@@ -789,6 +825,10 @@ function showHerzwerk() {
             lyrics.appendChild(li_herzwerk);
         }
     }
+}
+
+if (localStorage.getItem("dataHerzwerk")) {
+    showHerzwerk();
 }
 
 herzwerk.addEventListener("click", showHerzwerk);
