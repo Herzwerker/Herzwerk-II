@@ -257,7 +257,7 @@ img {
 
 #showcase:before {
   content: "";
-  background: url("img/megaherz wallpaper.jpg") no-repeat center center/cover;
+  background: url("https://proyecto-herzwerk.site/img/megaherzwallpaper.jpg") no-repeat center center/cover;
   position: absolute;
   top: 0;
   left: 0;
