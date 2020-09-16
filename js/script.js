@@ -312,7 +312,7 @@ const dataHeuchler = [{
         text: "Ebenbild ",
     },
     {
-        url: "https://youtu.be/sgKXCTdWyh4",
+        url: "https://youtu.be/O-7nVztYJ5k",
         text: "Mann von Welt",
     },
     {
@@ -475,7 +475,7 @@ const dataHerzwerkII = [{
         text: "Hand auf's Herz",
     },
     {
-        url: "https://youtu.be/wbknfHz33_U",
+        url: "https://youtu.be/hUtkD7XgFgU",
         text: "Zu den Sternen  ",
     },
     {
@@ -718,7 +718,7 @@ const dataWerbist = [{
         text: "Negativ",
     },
     {
-        url: "https://youtu.be/P-rE52CY-JU",
+        url: "https://youtu.be/IryFmtg6zhg",
         text: "Kopf durch die Wand ",
     },
     {
@@ -730,11 +730,11 @@ const dataWerbist = [{
         text: "Kröne der Schöpfung ",
     },
     {
-        url: "https://youtu.be/kA3_S32CCVo",
+        url: "https://youtu.be/mNEOLW018C8",
         text: "Tanzen gehen",
     },
     {
-        url: "https://youtu.be/E2HNeBJndtM",
+        url: "https://youtu.be/qF3mV5W8YRg",
         text: "Die Gedanken sind frei",
     },
     {
@@ -775,7 +775,7 @@ const dataHerzwerk = [{
         text: "Die Kröne der Schöpfung - An einem Kind ",
     },
     {
-        url: "https://youtu.be/_Q06H06Hw5E",
+        url: "https://youtu.be/cmUTW5jAKh0",
         text: "Zeit  ",
     },
     {
